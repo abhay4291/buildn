@@ -9,8 +9,8 @@ pipeline {
     }
   }
 
-  stages {
-        stage('Build') {
+  
+    stage('Build') {
             steps {
                 script {
                     def buildNumber = env.BUILD_NUMBER
@@ -19,4 +19,4 @@ pipeline {
             }
         }
     }
-}
+
