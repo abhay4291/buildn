@@ -7,16 +7,14 @@ pipeline {
         checkout scm
       }
     }
-  }
-
   
     stage('Build') {
-            steps {
-                script {
-                    def buildNumber = env.BUILD_NUMBER
-                    sh "mvn clean install -DbuildNumber=$buildNumber"
-                }
-            }
+      steps {
+        script {
+          def buildNumber = env.BUILD_NUMBER
+          sh "mvn clean install -DbuildNumber=$buildNumber"
         }
+      }
     }
-
+  }
+}
